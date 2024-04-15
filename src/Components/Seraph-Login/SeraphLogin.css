@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+/* Apply Itim font to all elements */
+* {
+  font-family: 'Itim', cursive;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #057e94;
+    color: #ffffff;
+    font-family: 'Itim', cursive;
+  }
+  h1, h3, a, .divider span, .create-account p {
+    color: #ffffff; /* Explicitly set to white for clarity */
+  }
+  
+  .welcome-text {
+    position: absolute; /* Position absolutely within the .car-section */
+    top: 5px;  /* Align to the top edge of .car-section */
+    left: 124px; /* Align to the left edge of .car-section */
+    width: 464px; /* Take full width of the parent container */
+    height: 177px; /* Take full height of the parent container */
+    display: flex; /* Use flex to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    opacity: 1; /* Fully opaque */
+    font-size: 80px;
+    line-height: 96px;
+    padding: 10px 20px; /* Top/bottom and left/right padding */
+    border-radius: 5px;
+    text-align: center; /* Center the text horizontally */
+    font-weight: 400;
+ 
+  }
+  
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as necessary */
+  }
+  
+  .car-container {
+    flex: 1; /* take up half the space */
+    display: flex;
+    justify-content: center; /* center the car image horizontally */
+    align-items: center; /* center the car image vertically */
+  }
+  
+  .car-section {
+    position: relative; /* Needed to position the child elements absolutely */
+    width: 100%; /* Ensure the container takes up the necessary space */
+    height: 754px; /* Adjusted to accommodate the top position of the logo */
+  }
+  
+  .car-logo {
+    position: absolute;
+    width: 500px; /* Width of the image */
+    height: 500px; /* Height of the image */
+    top: 230px; /* Position from the top within the container */
+    left: 106px; /* Position from the left within the container */
+    opacity: 1; /* Set to visible, change to 0 if you want it initially invisible */
+  }
+  
+  
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically if needed */
+    width: 100%;
+    max-width: 400px; /* Adjust this to suit the width of your form */
+    margin: 0 auto; /* This centers the form section in the available horizontal space */
+    padding: 0 2rem; /* Adjust padding as needed */
+  }
+  /* Ensure that the following is added to the SeraphLogin.css file */
+  .form-container form {
+    width: 100%; /* Use this to control the width of the form */
+  }
+
+  .input-group, .sign-in-button, .forgot-password-link, .divider, .google-sign-in-button, .create-account {
+  display: flex;
+  justify-content: center; /* This will center the form contents */
+  width: 100%; /* Adjust if necessary */
+}
+
+.sign-in-title {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    align-items: center;
+    width:172px;
+    height:64px;
+    top: 123px;
+    left:900px
+
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group label {
+    position: absolute;
+    top: -15px; /* Adjust as needed */
+    left: 0;
+    transition: all 0.3s;
+    color: #ffffff;
+    pointer-events: none;
+    padding: -10px -10px; /* Adjust padding as needed */
+    margin-left: -10px; 
+    left: -10px; 
+    font-size:10px;
+    font-weight: 600;
+    line-height: 12.1px;
+    font-family: 'Inter', sans-serif; 
+
+  }
+  input {
+    box-sizing: border-box; /* This ensures padding is included in the total width and height */
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #ffffff; /* Matching the button background for consistency */
+    width: 280px; /* Fixed width */
+    height: 29px; /* Fixed height */
+    padding: 10px 20px; /* Top/bottom padding then left/right padding */
+    margin: 8px 0 8px -25px; 
+  }
+  
+  input::placeholder {
+    color: transparent;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #02657c; /* Or any color that suits the design */
+  }
+  
+  input:focus + label {
+    top: -30px; /* Adjust if necessary when the input is focused */
+    font-size: 20px; /* Adjust as needed */
+    color: #02657c; /* Or any color that suits the design */
+  }
+  
+  .sign-in-button {
+    background-color: #004f54; 
+    color: #ffffff; 
+    font-size: 15px; 
+    line-height:18px;
+    align-items: center;
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Cursor to indicate it's clickable */
+    outline: none; /* Remove outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition for button effects */
+    width:120px;
+    height: 39px;
+    top: 378px;
+    left: 933px;
+    margin-left:60px;
+    white-space: nowrap;
+  }
+  
+  .sign-in-button:hover {
+    background-color: #02657c; /* Slightly lighter shade for hover state */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow for hover state */
+  }
+  
+  /* Remove the default webkit appearance of the button for iOS */
+  .sign-in-button::-webkit-appearance {
+    appearance: none;
+  }
+  
+  
+  .forgot-password-link {
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+    font-family: 'Inter', sans-serif; 
+    font-size:15px;
+    line-height:18.15px;
+    font-weight:400;
+    text-decoration: none;
+    margin-left: -5px; 
+  }
+  
+  .divider {
+    text-align: center; /* Center the OR text */
+    color: #ffffff; /* Set the color of the OR text */
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+    line-height: 1; /* Adjust line height to control the vertical spacing */
+    font-size: 15px;
+    font-weight: 400;
+    
+  }
+  
+  .divider span {
+    background: #057e94; /* Match the background color of your container */
+    padding: 0 10px; /* Spacing around the OR text */
+    position: relative; /* To stack on top of the lines */
+    z-index: 1; /* Ensure the text appears above the lines */
+    font-family: 'Inter', sans-serif; 
+  }
+  
+
+  .divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  border-top: 1px solid #ffffff; /* Set the color and thickness of your lines */
+  width: 40%; /* Control the width of your lines */
+  height: 1px; /* Border width is effectively the line height */
+}
+
+.divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .google-sign-in-button {
+    background-color: #ffffff; /* Background color of the button */
+    color: #000000; /* Color of the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 20px 0; /* Gives space above and below the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds some shadow for depth */
+    border: none; /* Removes the border */
+    cursor: pointer;
+    font-family: 'Inter', sans-serif; 
+  }
+
+  
+  .google-sign-in-button img {
+    margin-right: 10px;
+    width:22px;
+
+  }
+  
+  .create-account p {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif; 
+    font-size: 0.9rem;
+  }
+  
+  
+  .create-account-link {
+    color: #ffffff;
+    font-family: 'Inter', sans-serif; 
+    text-decoration: none;
+    color: #BDB9B9;
+    font-size:15px;
+    ;
+  }
+  
+
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .car-section {
+      margin-right: 0;
+    }
+  
+    .car-logo {
+      width: 80%;
+    }
+  }
